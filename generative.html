@@ -1,0 +1,38 @@
+<h3>generative art</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+
+<script>
+  let x;
+  let y;
+  let d;
+
+  function setup() {
+    createCanvas(700, 700);
+    frameRate(10);
+    background(251, 139, 36);
+    colorMode(RGB);
+  }
+
+  function draw() {
+    let raju = [color(154, 3, 30), color(227, 100, 20)];
+
+    stroke(random(raju));
+    strokeWeight(random(20)), (c = random(raju));
+
+    c.setAlpha(random(0, 100));
+
+    x = random(0, width);
+    y = random(0, width);
+    d = random(20 - 150);
+
+    fill(c);
+
+    ellipse(x, y, d);
+    //ellipse (mouseX, mouseY, d);
+
+    print(frameCount);
+
+    //color(95, 15, 64),
+  }
+</script>
